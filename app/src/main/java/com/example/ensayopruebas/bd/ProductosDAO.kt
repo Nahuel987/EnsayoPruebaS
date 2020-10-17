@@ -19,7 +19,7 @@ interface ProductosDAO {
     suspend fun insertProductos(productos: Productos)
 
     // traer todos los elementos de la tabla
-    @Query("SELECT * FROM productos_table ORDER BY id DESC")
+    @Query("SELECT * FROM productos_table ORDER BY id ASC")
     fun getAllListProductos() : LiveData<List<Productos>>
 
     //Borrarlos todos
